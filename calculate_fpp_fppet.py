@@ -58,6 +58,8 @@ def calculate_fp_pet(start_date, end_date):
         et0 = ((0.408 * delta * (rn - g)) + (gamma * (900 / (t_mean + 273)) * u2 * (es - ea))) / (delta + gamma * (1 + 0.34 * u2))
 
         fp_pet += et0
+    
+    print("fp_pet is:", fp_pet)
         
     return round(fp_pet, 2)  # Rounded to 2 decimal places
 
@@ -68,6 +70,8 @@ def calculate_fpp(start_date, end_date):
     for single_date in daterange(start_date, end_date):
         p = np.random.normal(10,2,1)
         fpp += p
+
+    print("fpp is:", fpp)
     
     return fpp
 
