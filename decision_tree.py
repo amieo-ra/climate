@@ -1,5 +1,5 @@
 from clim_zone_lookup import determine_zone
-from calculate_fpp_fppet import calculate_et0, calculate_fp_pet
+from calculate_fpp_fppet import calculate_fp_pet, calculate_fpp
 
 import datetime
 
@@ -17,8 +17,8 @@ class WetDryDecisionTree:
         if self.zone == "Non-Temperate":
             return "Use wet or dry factors depending on annual climate zone set in farm settings"
         elif self.zone == 'Temperate':
-            self.fp_pet = calculate_et0()
-            self.fpp = calculate_fp_pet()
+            self.fp_pet = calculate_fp_pet(self.start_date, self.end_date)
+            self.fpp = calculate_fpp(self.start_date, self.end_date)
             if self.fpp/self.fp_pet > 1:
                 if self.well_drained == "yes":
                     if self.soil_type == "sandy":
