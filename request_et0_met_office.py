@@ -1,5 +1,6 @@
-import openmeteo_requests
+#######TAKEN FROM: https://open-meteo.com/en/docs/ukmo-api#latitude=51.5085&longitude=-0.1257&current=&hourly=temperature_2m,precipitation,et0_fao_evapotranspiration&daily=&minutely_15=&models= ########
 
+import openmeteo_requests
 import requests_cache
 import pandas as pd
 from retry_requests import retry
