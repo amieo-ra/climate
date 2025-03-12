@@ -1,4 +1,5 @@
 from clim_zone_lookup import determine_zone
+from soil_lookup import determine_soil_type
 from calculate_fpp_fppet import calculate_fp_pet, calculate_fpp
 
 import datetime
@@ -21,6 +22,7 @@ class WetDryDecisionTree:
             self.fpp = calculate_fpp(self.start_date, self.end_date)
             if self.fpp/self.fp_pet > 1:
                 if self.well_drained == "yes":
+                    self.soil_type = determine_soil_type(self.lon, self.lat)
                     if self.soil_type == "sandy":
                         return "dry"
                     elif self.soil_type == "clay":

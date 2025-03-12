@@ -4,7 +4,7 @@ def determine_zone(lon, lat):
 
     # Define the file path to your IPCC Climate Zones .tif file
     #tif_path = "/home/amieo/Documents/data_for_climate/outputs/300_outputs/IPCC_Climate_Zones/IPCC_Climate_Zones_ts_3.25.tif"
-    tif_path = "/home/amie/Documents/data_for_climate/ipcc_climate_1985-2015.tif"
+    tif_path = "/home/amieo/Documents/data_for_climate/ipcc_climate_1985-2015.tif"
 
     # Define GPS coordinates for York, UK
     #lon, lat = (-1.0815, 53.9590)  # Longitude, Latitude
